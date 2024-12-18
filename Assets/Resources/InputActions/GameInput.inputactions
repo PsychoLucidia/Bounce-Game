@@ -95,7 +95,18 @@
                     "path": "<DualShockGamepad>/leftStick",
                     "interactions": "",
                     "processors": "StickDeadzone",
-                    "groups": "DualShock 4",
+                    "groups": "DualShock4",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fd204d97-c721-46f8-9962-999ed91dc34e",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "GamepadGeneric",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -117,7 +128,7 @@
                     "path": "<DualShockGamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "DualShock 4",
+                    "groups": "DualShock4",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -140,9 +151,63 @@
             "id": "8ace06f4-a0ed-4fbb-9a8a-42cc87080927",
             "actions": [
                 {
-                    "name": "New action",
-                    "type": "Button",
+                    "name": "Navigate",
+                    "type": "PassThrough",
+                    "id": "98466e58-0035-4409-845e-686e30a8cf1d",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Point",
+                    "type": "PassThrough",
                     "id": "46e7331e-b0d1-45d1-aa75-5f1b9da1ec85",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftClick",
+                    "type": "PassThrough",
+                    "id": "3397b702-d8e5-4c05-bec3-2d8c3051badb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "MiddleClick",
+                    "type": "PassThrough",
+                    "id": "d0e6d77e-b28d-4fde-a1c4-f8edce8cb207",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RightClick",
+                    "type": "PassThrough",
+                    "id": "7a0f07cf-eb98-48aa-bbba-c270d187d044",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Confirm",
+                    "type": "Button",
+                    "id": "c89d35c8-3c61-4d61-8ad8-686f9135fd4e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Back",
+                    "type": "Button",
+                    "id": "2e4e5d6b-b7a8-4b12-9898-682aae37a7e6",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -153,11 +218,121 @@
                 {
                     "name": "",
                     "id": "9efab3c4-530b-46a6-a21d-780c30365eca",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardAndMouse",
+                    "action": "Point",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "22cf4120-bc74-4b6d-9836-d43e17488f59",
+                    "path": "<Touchscreen>/touch*/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Touch",
+                    "action": "Point",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c9212c2d-8fe2-4a6f-8851-b57cf15d60b7",
+                    "path": "<Touchscreen>/touch*/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Touch",
+                    "action": "LeftClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fb12af08-2846-45c9-a8c3-5bc68e435537",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardAndMouse",
+                    "action": "LeftClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a8d5d06b-0b1f-4b9d-9895-ab1e4ef22a1f",
                     "path": "",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "New action",
+                    "groups": "GamepadGeneric",
+                    "action": "MiddleClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "26934ef8-f496-4d41-97b7-61d20ef6b96e",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "GamepadGeneric",
+                    "action": "Confirm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "48e247a5-c780-4ad4-a22c-7c5c96be6745",
+                    "path": "*/{Submit}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DualShock4",
+                    "action": "Confirm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3380da63-a43b-4170-9a59-314b5482b61e",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "GamepadGeneric",
+                    "action": "Back",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "11d259fe-6c6e-4510-a8ec-1c5c05c6c162",
+                    "path": "*/{Submit}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DualShock4;KeyboardAndMouse;Touch;GamepadGeneric",
+                    "action": "Back",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9a921bc3-f1ba-47de-93a0-dc7497a6021c",
+                    "path": "<DualShockGamepad>/dpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DualShock4",
+                    "action": "Navigate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1910137f-3ba3-4789-b491-edf62e1be99a",
+                    "path": "<DualShockGamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DualShock4",
+                    "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -168,12 +343,51 @@
         {
             "name": "KeyboardAndMouse",
             "bindingGroup": "KeyboardAndMouse",
-            "devices": []
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
         },
         {
-            "name": "DualShock 4",
-            "bindingGroup": "DualShock 4",
-            "devices": []
+            "name": "DualShock4",
+            "bindingGroup": "DualShock4",
+            "devices": [
+                {
+                    "devicePath": "<DualShockGamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Touch",
+            "bindingGroup": "Touch",
+            "devices": [
+                {
+                    "devicePath": "<Touchscreen>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "GamepadGeneric",
+            "bindingGroup": "GamepadGeneric",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
         }
     ]
 }

@@ -7,10 +7,13 @@ using UnityEngine.InputSystem;
 public class PlayerInputHandler : MonoBehaviour
 {
     public GameInput gameInput;
-    private PlayerMovementRB playerMovementRB;
     public SetFramerate framerate;
 
     [SerializeField] private Vector2 direction; 
+
+    // Non-Serialized
+    private PlayerMovementRB playerMovementRB;
+
 
     void Awake()
     {
@@ -21,10 +24,19 @@ public class PlayerInputHandler : MonoBehaviour
 
     void OnEnable()
     {
+        EnableInGameInput();
+    }
+
+    void EnableInGameInput()
+    {
         gameInput.InGame.Enable();
+
         gameInput.InGame.Move.performed += HandleMovement;
         gameInput.InGame.Move.canceled += HandleMovement;
-        gameInput.InGame.Jump.started += HandleJump;
+
+        gameInput.InGame.Jump.performed += HandleJump;
+        gameInput.InGame.Jump.canceled += HandleJump;
+
         gameInput.InGame.SetFramerate.started += HandleFramerate;
     }
 
@@ -52,7 +64,10 @@ public class PlayerInputHandler : MonoBehaviour
 
     void HandleJump(InputAction.CallbackContext context)
     {
-        playerMovementRB.Jump();
+        if (context.performed)
+        {
+            playerMovementRB.Jump();
+        }
     }
 
     void HandleFramerate(InputAction.CallbackContext context)

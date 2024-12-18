@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -48,15 +49,15 @@ public class PlayerMovementRB : MonoBehaviour
     {
         Vector3 finalMoveDirection = new Vector3(moveDirection.x, 0, 0);
 
-        if (moveDirection.magnitude > 0.1f)
+        if (finalMoveDirection.magnitude > 0.1f)
         {
-            _rb.velocity = new Vector3(finalMoveDirection.x * moveSpeed, _rb.velocity.y, _rb.velocity.z);
+            _rb.AddForce(finalMoveDirection * moveSpeed * 5f, ForceMode.Force);
         }
     }
 
     void LimitVelocity()
     {
-        Vector3 currentVelocity = new Vector3(_rb.velocity.x, 0, _rb.velocity.z);
+        Vector3 currentVelocity = new Vector3(_rb.velocity.x, 0, 0);
 
         if (currentVelocity.magnitude > moveSpeed)
         {

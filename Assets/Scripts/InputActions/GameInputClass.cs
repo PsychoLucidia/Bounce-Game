@@ -117,7 +117,18 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
                     ""path"": ""<DualShockGamepad>/leftStick"",
                     ""interactions"": """",
                     ""processors"": ""StickDeadzone"",
-                    ""groups"": ""DualShock 4"",
+                    ""groups"": ""DualShock4"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fd204d97-c721-46f8-9962-999ed91dc34e"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""GamepadGeneric"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -139,7 +150,7 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
                     ""path"": ""<DualShockGamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""DualShock 4"",
+                    ""groups"": ""DualShock4"",
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -162,9 +173,63 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
             ""id"": ""8ace06f4-a0ed-4fbb-9a8a-42cc87080927"",
             ""actions"": [
                 {
-                    ""name"": ""New action"",
-                    ""type"": ""Button"",
+                    ""name"": ""Navigate"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""98466e58-0035-4409-845e-686e30a8cf1d"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Point"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""46e7331e-b0d1-45d1-aa75-5f1b9da1ec85"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LeftClick"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""3397b702-d8e5-4c05-bec3-2d8c3051badb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""MiddleClick"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""d0e6d77e-b28d-4fde-a1c4-f8edce8cb207"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RightClick"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""7a0f07cf-eb98-48aa-bbba-c270d187d044"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Confirm"",
+                    ""type"": ""Button"",
+                    ""id"": ""c89d35c8-3c61-4d61-8ad8-686f9135fd4e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Back"",
+                    ""type"": ""Button"",
+                    ""id"": ""2e4e5d6b-b7a8-4b12-9898-682aae37a7e6"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -175,11 +240,121 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""9efab3c4-530b-46a6-a21d-780c30365eca"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""Point"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""22cf4120-bc74-4b6d-9836-d43e17488f59"",
+                    ""path"": ""<Touchscreen>/touch*/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touch"",
+                    ""action"": ""Point"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c9212c2d-8fe2-4a6f-8851-b57cf15d60b7"",
+                    ""path"": ""<Touchscreen>/touch*/Press"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touch"",
+                    ""action"": ""LeftClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fb12af08-2846-45c9-a8c3-5bc68e435537"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""LeftClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a8d5d06b-0b1f-4b9d-9895-ab1e4ef22a1f"",
                     ""path"": """",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""New action"",
+                    ""groups"": ""GamepadGeneric"",
+                    ""action"": ""MiddleClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""26934ef8-f496-4d41-97b7-61d20ef6b96e"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""GamepadGeneric"",
+                    ""action"": ""Confirm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""48e247a5-c780-4ad4-a22c-7c5c96be6745"",
+                    ""path"": ""*/{Submit}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""DualShock4"",
+                    ""action"": ""Confirm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3380da63-a43b-4170-9a59-314b5482b61e"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""GamepadGeneric"",
+                    ""action"": ""Back"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""11d259fe-6c6e-4510-a8ec-1c5c05c6c162"",
+                    ""path"": ""*/{Submit}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""DualShock4;KeyboardAndMouse;Touch;GamepadGeneric"",
+                    ""action"": ""Back"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9a921bc3-f1ba-47de-93a0-dc7497a6021c"",
+                    ""path"": ""<DualShockGamepad>/dpad"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""DualShock4"",
+                    ""action"": ""Navigate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1910137f-3ba3-4789-b491-edf62e1be99a"",
+                    ""path"": ""<DualShockGamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""DualShock4"",
+                    ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -190,12 +365,51 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         {
             ""name"": ""KeyboardAndMouse"",
             ""bindingGroup"": ""KeyboardAndMouse"",
-            ""devices"": []
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<Mouse>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
         },
         {
-            ""name"": ""DualShock 4"",
-            ""bindingGroup"": ""DualShock 4"",
-            ""devices"": []
+            ""name"": ""DualShock4"",
+            ""bindingGroup"": ""DualShock4"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<DualShockGamepad>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Touch"",
+            ""bindingGroup"": ""Touch"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Touchscreen>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""GamepadGeneric"",
+            ""bindingGroup"": ""GamepadGeneric"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
         }
     ]
 }");
@@ -206,7 +420,13 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         m_InGame_SetFramerate = m_InGame.FindAction("SetFramerate", throwIfNotFound: true);
         // UINavigation
         m_UINavigation = asset.FindActionMap("UINavigation", throwIfNotFound: true);
-        m_UINavigation_Newaction = m_UINavigation.FindAction("New action", throwIfNotFound: true);
+        m_UINavigation_Navigate = m_UINavigation.FindAction("Navigate", throwIfNotFound: true);
+        m_UINavigation_Point = m_UINavigation.FindAction("Point", throwIfNotFound: true);
+        m_UINavigation_LeftClick = m_UINavigation.FindAction("LeftClick", throwIfNotFound: true);
+        m_UINavigation_MiddleClick = m_UINavigation.FindAction("MiddleClick", throwIfNotFound: true);
+        m_UINavigation_RightClick = m_UINavigation.FindAction("RightClick", throwIfNotFound: true);
+        m_UINavigation_Confirm = m_UINavigation.FindAction("Confirm", throwIfNotFound: true);
+        m_UINavigation_Back = m_UINavigation.FindAction("Back", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -330,12 +550,24 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
     // UINavigation
     private readonly InputActionMap m_UINavigation;
     private List<IUINavigationActions> m_UINavigationActionsCallbackInterfaces = new List<IUINavigationActions>();
-    private readonly InputAction m_UINavigation_Newaction;
+    private readonly InputAction m_UINavigation_Navigate;
+    private readonly InputAction m_UINavigation_Point;
+    private readonly InputAction m_UINavigation_LeftClick;
+    private readonly InputAction m_UINavigation_MiddleClick;
+    private readonly InputAction m_UINavigation_RightClick;
+    private readonly InputAction m_UINavigation_Confirm;
+    private readonly InputAction m_UINavigation_Back;
     public struct UINavigationActions
     {
         private @GameInput m_Wrapper;
         public UINavigationActions(@GameInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Newaction => m_Wrapper.m_UINavigation_Newaction;
+        public InputAction @Navigate => m_Wrapper.m_UINavigation_Navigate;
+        public InputAction @Point => m_Wrapper.m_UINavigation_Point;
+        public InputAction @LeftClick => m_Wrapper.m_UINavigation_LeftClick;
+        public InputAction @MiddleClick => m_Wrapper.m_UINavigation_MiddleClick;
+        public InputAction @RightClick => m_Wrapper.m_UINavigation_RightClick;
+        public InputAction @Confirm => m_Wrapper.m_UINavigation_Confirm;
+        public InputAction @Back => m_Wrapper.m_UINavigation_Back;
         public InputActionMap Get() { return m_Wrapper.m_UINavigation; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -345,16 +577,52 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_UINavigationActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_UINavigationActionsCallbackInterfaces.Add(instance);
-            @Newaction.started += instance.OnNewaction;
-            @Newaction.performed += instance.OnNewaction;
-            @Newaction.canceled += instance.OnNewaction;
+            @Navigate.started += instance.OnNavigate;
+            @Navigate.performed += instance.OnNavigate;
+            @Navigate.canceled += instance.OnNavigate;
+            @Point.started += instance.OnPoint;
+            @Point.performed += instance.OnPoint;
+            @Point.canceled += instance.OnPoint;
+            @LeftClick.started += instance.OnLeftClick;
+            @LeftClick.performed += instance.OnLeftClick;
+            @LeftClick.canceled += instance.OnLeftClick;
+            @MiddleClick.started += instance.OnMiddleClick;
+            @MiddleClick.performed += instance.OnMiddleClick;
+            @MiddleClick.canceled += instance.OnMiddleClick;
+            @RightClick.started += instance.OnRightClick;
+            @RightClick.performed += instance.OnRightClick;
+            @RightClick.canceled += instance.OnRightClick;
+            @Confirm.started += instance.OnConfirm;
+            @Confirm.performed += instance.OnConfirm;
+            @Confirm.canceled += instance.OnConfirm;
+            @Back.started += instance.OnBack;
+            @Back.performed += instance.OnBack;
+            @Back.canceled += instance.OnBack;
         }
 
         private void UnregisterCallbacks(IUINavigationActions instance)
         {
-            @Newaction.started -= instance.OnNewaction;
-            @Newaction.performed -= instance.OnNewaction;
-            @Newaction.canceled -= instance.OnNewaction;
+            @Navigate.started -= instance.OnNavigate;
+            @Navigate.performed -= instance.OnNavigate;
+            @Navigate.canceled -= instance.OnNavigate;
+            @Point.started -= instance.OnPoint;
+            @Point.performed -= instance.OnPoint;
+            @Point.canceled -= instance.OnPoint;
+            @LeftClick.started -= instance.OnLeftClick;
+            @LeftClick.performed -= instance.OnLeftClick;
+            @LeftClick.canceled -= instance.OnLeftClick;
+            @MiddleClick.started -= instance.OnMiddleClick;
+            @MiddleClick.performed -= instance.OnMiddleClick;
+            @MiddleClick.canceled -= instance.OnMiddleClick;
+            @RightClick.started -= instance.OnRightClick;
+            @RightClick.performed -= instance.OnRightClick;
+            @RightClick.canceled -= instance.OnRightClick;
+            @Confirm.started -= instance.OnConfirm;
+            @Confirm.performed -= instance.OnConfirm;
+            @Confirm.canceled -= instance.OnConfirm;
+            @Back.started -= instance.OnBack;
+            @Back.performed -= instance.OnBack;
+            @Back.canceled -= instance.OnBack;
         }
 
         public void RemoveCallbacks(IUINavigationActions instance)
@@ -386,8 +654,26 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
     {
         get
         {
-            if (m_DualShock4SchemeIndex == -1) m_DualShock4SchemeIndex = asset.FindControlSchemeIndex("DualShock 4");
+            if (m_DualShock4SchemeIndex == -1) m_DualShock4SchemeIndex = asset.FindControlSchemeIndex("DualShock4");
             return asset.controlSchemes[m_DualShock4SchemeIndex];
+        }
+    }
+    private int m_TouchSchemeIndex = -1;
+    public InputControlScheme TouchScheme
+    {
+        get
+        {
+            if (m_TouchSchemeIndex == -1) m_TouchSchemeIndex = asset.FindControlSchemeIndex("Touch");
+            return asset.controlSchemes[m_TouchSchemeIndex];
+        }
+    }
+    private int m_GamepadGenericSchemeIndex = -1;
+    public InputControlScheme GamepadGenericScheme
+    {
+        get
+        {
+            if (m_GamepadGenericSchemeIndex == -1) m_GamepadGenericSchemeIndex = asset.FindControlSchemeIndex("GamepadGeneric");
+            return asset.controlSchemes[m_GamepadGenericSchemeIndex];
         }
     }
     public interface IInGameActions
@@ -398,6 +684,12 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
     }
     public interface IUINavigationActions
     {
-        void OnNewaction(InputAction.CallbackContext context);
+        void OnNavigate(InputAction.CallbackContext context);
+        void OnPoint(InputAction.CallbackContext context);
+        void OnLeftClick(InputAction.CallbackContext context);
+        void OnMiddleClick(InputAction.CallbackContext context);
+        void OnRightClick(InputAction.CallbackContext context);
+        void OnConfirm(InputAction.CallbackContext context);
+        void OnBack(InputAction.CallbackContext context);
     }
 }
